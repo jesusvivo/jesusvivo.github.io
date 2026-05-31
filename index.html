@@ -1,22 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Jesus Vivo website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jesús Vivo Castro</title>
+    <meta name="description" content="Software engineer building ML projects on the side." />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="blurb">
-        <h1>Hi there, I am Jesús Vivo Castro!</h1>
-        <p>Who am I?</p>
-      </div>
+      <main>
+        <section class="hero">
+          <h1>Jesús Vivo Castro</h1>
+          <p class="subtitle">Software engineer building ML projects on the side.</p>
+        </section>
+
+        <section class="projects-section">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <span class="tag">Tabular ML</span>
+              <h3>F1 Pit Stop Prediction</h3>
+              <p class="tagline">Predicting when an F1 driver will pit next from per-lap telemetry.</p>
+              <p>
+                Stacked XGBoost, LightGBM, and CatBoost with out-of-fold target encoding and a
+                custom temporal CV splitter. Landed at 0.94 public LB ROC-AUC on Kaggle Playground
+                Series S6E5 after seven iterations. The README has the full iteration log: what I
+                tried, what failed, what worked.
+              </p>
+              <a class="project-link" href="https://github.com/jesusvivo/f1-pit-stop-prediction">
+                GitHub &rarr;
+              </a>
+            </article>
+
+            <article class="project">
+              <span class="tag">NLP</span>
+              <h3>Movie Dialogue Emotions</h3>
+              <p class="tagline">
+                Train a sentiment classifier on tweets. Ask it how Fight Club characters feel.
+              </p>
+              <p>
+                Sentence-transformer embeddings plus logistic regression on the Kaggle Emotion
+                Detection dataset, then applied to the Cornell Movie Dialogs Corpus to chart how
+                Tyler, Marla, and Jack shift emotionally across the runtime. Originally a UNIMI
+                course project, refactored into a modular pipeline.
+              </p>
+              <a class="project-link" href="https://github.com/jesusvivo/movie-dialogue-emotions">
+                GitHub &rarr;
+              </a>
+            </article>
+
+            <article class="project">
+              <span class="tag">Big Data</span>
+              <h3>US Flight Cancellations</h3>
+              <p class="tagline">
+                PySpark feature prep plus a logistic regression hand-built from scratch, validated
+                against XGBoost.
+              </p>
+              <p>
+                Spark feature pipeline over 7M US flight records, a hand-coded NumPy logistic
+                regression with manual gradient descent, then a three-way comparison against
+                PySpark MLlib&rsquo;s LR and an XGBoost ensemble. The README catches two real bugs
+                in the original notebook.
+              </p>
+              <a class="project-link" href="https://github.com/jesusvivo/us-flight-cancellations">
+                GitHub &rarr;
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="exploring">
+          <h2 class="section-title">Currently exploring</h2>
+          <ul>
+            <li>Replacing PySpark with Polars or DuckDB for faster local pipelines without the JVM.</li>
+            <li>Sentence-transformer fine-tuning on class-imbalanced sentiment data.</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <ul>
+          <li><a href="https://github.com/jesusvivo">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jesusvivo/">LinkedIn</a></li>
+          <li><a href="mailto:jesusvivocastro@gmail.com">Email</a></li>
+        </ul>
+      </footer>
     </div>
-    <footer>
-      <ul>
-        <li><a href="mailto:jesusvivocastro@gmail.com">Email</a></li>
-        <li>
-          <a href="https://github.com/jesusvivo">github.com/jesusvivo</a>
-        </li>
-      </ul>
-    </footer>
   </body>
 </html>
