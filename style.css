@@ -139,6 +139,10 @@ main > section:first-child {
   font-weight: 500;
 }
 
+.project .project-link + .project-link {
+  margin-left: 1.25rem;
+}
+
 /* Currently exploring */
 .exploring ul {
   list-style: none;

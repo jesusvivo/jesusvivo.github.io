@@ -19,6 +19,29 @@
           <h2 class="section-title">Projects</h2>
           <div class="projects">
             <article class="project">
+              <span class="tag">MLOps</span>
+              <h3>Marathon Performance Predictor</h3>
+              <p class="tagline">
+                A multi-distance race-time predictor served end-to-end, on my own Garmin
+                training data.
+              </p>
+              <p>
+                BentoML + ONNX behind a Feast feature store, deployed to GCP Cloud Run with
+                scale-to-zero. Multisport fitness state (CTL / ATL / TSB across running, cycling,
+                and swimming) feeds a personalized velocity-duration curve; running efforts are the
+                labels. Evaluated per-distance with MAPE, never an averaged-minutes score. The
+                headline output is a marathon finish-time projection with an uncertainty band,
+                tracked across an 8-month block and validated against my Feb 2027 marathon debut.
+              </p>
+              <a class="project-link" href="https://race-predictor-738965554321.europe-west1.run.app">
+                Live demo &rarr;
+              </a>
+              <a class="project-link" href="https://github.com/jesusvivo/marathon-performance-predictor">
+                GitHub &rarr;
+              </a>
+            </article>
+
+            <article class="project">
               <span class="tag">Tabular ML</span>
               <h3>F1 Pit Stop Prediction</h3>
               <p class="tagline">Predicting when an F1 driver will pit next from per-lap telemetry.</p>
